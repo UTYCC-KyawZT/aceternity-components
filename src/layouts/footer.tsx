@@ -5,6 +5,7 @@ function Footer() {
     return (
         <footer className="text-white bg-black body-font">
             <div className="container mb-5 px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+                <br />
                 <a className="flex title-font font-medium items-center md:justify-start justify-center">
                     <Image src="/assets/logo.png" alt="logo" width={50} height={50} />
                     <span className="ml-3 text-xl">EzTechEzLife</span>
