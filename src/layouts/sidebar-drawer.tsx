@@ -22,6 +22,13 @@ function SidebarDrawer() {
 
   const menuItems = [
     {
+      id: 0,
+      name: "Home",
+      icon: "/assets/menu-icons/home.png",
+      url: "/",
+      reference: ""
+    },
+    {
       id: 1,
       name: "Macbook Scroll",
       icon: "/assets/menu-icons/next.png",
@@ -32,7 +39,7 @@ function SidebarDrawer() {
       id: 2,
       name: "Google Gemini Effect",
       icon: "/assets/menu-icons/next.png",
-      url: "/google-gemini-effect",
+      url: "/google-gemini",
       reference: "https://ui.aceternity.com/components/google-gemini-effect"
     },
     {
@@ -45,19 +52,21 @@ function SidebarDrawer() {
   ]
 
   const DrawerList = (
-    <Box sx={{ width: 250, }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250, height: "100%", bgcolor:"black", color: "white" }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {menuItems.map((menuItem, index) => (
-          <ListItem key={index} disablePadding>
-            <Link href={menuItem.url}>
+          <Link key={index} href={menuItem.url}>
+            <ListItem disablePadding>
+
               <ListItemButton>
                 <ListItemIcon>
                   <Image src={menuItem.icon} alt="icon" width={30} height={30} />
                 </ListItemIcon>
                 <ListItemText primary={menuItem.name} />
               </ListItemButton>
-            </Link>
-          </ListItem>
+
+            </ListItem>
+          </Link>
         ))}
       </List>
     </Box>
@@ -65,7 +74,7 @@ function SidebarDrawer() {
 
   return (
     <div className='bg-black'>
-      <Button sx={{ m: 2 }} className='' variant='outlined' onClick={toggleDrawer(true)}>
+      <Button sx={{ m: 2, zIndex: 50 }} className='' variant='outlined' onClick={toggleDrawer(true)}>
         <Image className='mr-10' src="/assets/menu-icons/drawer.png" alt="drawer" width={30} height={30} />
       </Button>
       <Drawer open={open} onClose={toggleDrawer(false)}>
