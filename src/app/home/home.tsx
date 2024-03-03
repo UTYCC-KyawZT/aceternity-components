@@ -3,6 +3,7 @@
 import React from 'react'
 import { SparklesCore } from '@/components/ui/sparkles';
 import { TypewriterEffect } from '@/components/ui/typewriter-effect';
+import { BackgroundBeams } from '@/components/ui/background-beams';
 
 function Home() {
   return (
@@ -32,6 +33,7 @@ function Home() {
           <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
         </div>
       </div>
+      <BackgroundBeams />
     </main>
   )
 }
