@@ -14,6 +14,7 @@ function Footer() {
                     <a href="https://kyawkingston.com" className=" ml-1" rel="noopener noreferrer" target="_blank"> @kingston</a>
                 </p>
                 <br />
+                <br />
             </div>
         </footer>
     )
